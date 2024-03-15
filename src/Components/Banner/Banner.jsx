@@ -18,10 +18,10 @@ const Banner = () => {
           health and vitality.
         </p>
         <div className="flex justify-center gap-8 ">
-          <button className="btn border-none px-8  text-xl  font-semibold bg-green-400 rounded-full ">
+          <button className=" border-none px-9 text-black  py-4 text-xl  font-semibold bg-green-400 rounded-full ">
             Explore Now
           </button>
-          <button className="px-8 btn text-xl font-semibold bg-transparent border-white text-white rounded-full">
+          <button className=" px-9  py-4 text-xl font-semibold bg-transparent  border-2 text-white rounded-full">
             Our Feedback
           </button>
         </div>
