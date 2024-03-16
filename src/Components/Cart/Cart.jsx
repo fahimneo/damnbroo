@@ -1,46 +1,46 @@
-// import PropTypes from "prop-types";
-const Cart = () => {
-  //   console.log(handleFoodCard);
+import PropTypes from "prop-types";
+
+const Cart = ({ addCarts, handlePreparing }) => {
+  console.log(addCarts);
   return (
     <div>
-      {/* food cart */}
-      <div className="border-2 rounded-xl text-xl font-semibold text-center">
-        <div className="mt-8">
-          <h3>Want to cook:01</h3>
-          <div className="border-b-2 mt-4 mb-6"></div>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="table">
-            {/* head */}
-            <thead>
-              <tr className="font-medium opacity-75">
-                <th></th>
-                <th>Name</th>
-                <th>time</th>
-                <th>Calories</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              <tr className="bg-base-200">
-                <th>1</th>
-                <td className="opacity-60">Cy Ganderton</td>
-                <td className="opacity-60">Quality Control Specialist</td>
-                <td className="opacity-60">Blue</td>
-                <th>
-                  <button className="btn  border-none  text-black     font-semibold bg-green-400 rounded-full ">
-                    Explore Now
+      <div className="overflow-x-auto">
+        <table className="table">
+          {/* head */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>time</th>
+              <th>Calories</th>
+            </tr>
+          </thead>
+          <tbody>
+            {addCarts.map((cart, idx) => (
+              <tr key={idx}>
+                <th>{idx + 1}</th>
+                <td>{cart.recipe_name}</td>
+                <td>{cart.preparing_time}</td>
+                <td>{cart.calories}</td>
+                <td>
+                  <button
+                    onClick={() => handlePreparing(addCarts)}
+                    className="btn  border-none  text-black hover:text-white font-semibold bg-green-400 rounded-full "
+                  >
+                    Preparing
                   </button>
-                </th>
+                </td>
               </tr>
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
 };
+
 Cart.propTypes = {
-  //   handleFoodCard: PropTypes.func.isRequired,
+  addCarts: PropTypes.array.isRequired,
+  handlePreparing: PropTypes.func.isRequired,
 };
 export default Cart;

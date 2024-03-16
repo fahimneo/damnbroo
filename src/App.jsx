@@ -1,27 +1,59 @@
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
-import Cart from "./Components/Cart/Cart";
+
 import FoodCards from "./Components/Cards/FoodCards";
+import Cart from "./Components/Cart/Cart";
+import Carts from "./Components/Carts/Carts";
 import Navbar from "./Components/navbar/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [foodCards, setFoodCards] = useState([]);
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((date) => setFoodCards(date));
+    // console.log(foodCards);
+  }, []);
+
   const [addCarts, setAddCarts] = useState([]);
   const handleFoodCard = (data) => {
-    const newCart = [...addCarts, data];
-    setAddCarts(newCart);
-    console.log(data);
+    const isExist = addCarts.find((p) => p.recipe_id == data.recipe_id);
+    // console.log(data.recipe_id);
+    if (!isExist) {
+      setAddCarts([...addCarts, data]);
+    } else {
+      alert("Already in cart");
+    }
+  };
 
-    // console.log("hiiiiiiiii", handleFoodCard);
+  const handlePreparing = () => {
+    console.log("hiiiiiiii", handlePreparing);
   };
   return (
     <>
       <div className="">
         <Navbar></Navbar>
         <Banner></Banner>
-        <div className="flex gap-6 container mx-auto">
-          <FoodCards handleFoodCard={handleFoodCard} className=""></FoodCards>
-          <Cart></Cart>
+        <div className="text-center">
+          <h3>Our Recipes</h3>
+          <p>
+            Explore Our Recipes, your culinary companion for delicious dishes.
+            Discover diverse flavors, simple recipes, and culinary inspiration
+            for every occasion.
+          </p>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-6 container mx-auto">
+          <FoodCards
+            foodCards={foodCards}
+            handleFoodCard={handleFoodCard}
+            className=""
+          ></FoodCards>
+
+          <div className="flex-1 border-2 rounded-xl">
+            <Carts addCarts={addCarts}></Carts>
+            <Cart addCarts={addCarts} handlePreparing={handlePreparing}></Cart>
+          </div>
         </div>
       </div>
     </>

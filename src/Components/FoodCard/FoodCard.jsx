@@ -28,7 +28,7 @@ const FoodCard = ({ foodCard, handleFoodCard }) => {
                 <h2 className="text-xl font-semibold mt-6 mb-4">
                   {recipe_name}
                 </h2>
-                <p className="opacity-75 ">{short_description.slice(0, 60)}</p>
+                <p className="opacity-75 ">{short_description.slice(0, 65)}</p>
                 <div className="border-b-2 mt-4 mb-6"></div>
                 <h3 className=" mb-4">Ingredients: {ingredients.length}</h3>
                 {ingredients.map((item, idx) => (
