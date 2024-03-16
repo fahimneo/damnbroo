@@ -1,4 +1,6 @@
+// import PropTypes from "prop-types";
 const Cart = () => {
+  //   console.log(handleFoodCard);
   return (
     <div>
       {/* food cart */}
@@ -38,5 +40,7 @@ const Cart = () => {
     </div>
   );
 };
-
+Cart.propTypes = {
+  //   handleFoodCard: PropTypes.func.isRequired,
+};
 export default Cart;

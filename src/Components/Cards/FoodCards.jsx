@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { useState } from "react";
 import FoodCard from "../FoodCard/FoodCard";
-const FoodCards = () => {
+const FoodCards = ({ handleFoodCard }) => {
   const [foodCards, setFoodCards] = useState([]);
 
   useEffect(() => {
@@ -11,21 +12,20 @@ const FoodCards = () => {
     // console.log(foodCards);
   }, []);
 
-  const handleFoodCard = () => {
-    console.log("hiiiiiiiii", handleFoodCard);
-  };
-
   return (
     <div className="grid grid-cols-2 gap-5">
       {foodCards.map((foodCard, idx) => (
         <FoodCard
+          handleFoodCard={handleFoodCard}
           key={idx}
           foodCard={foodCard}
-          handleFoodCard={handleFoodCard}
         ></FoodCard>
       ))}
     </div>
   );
 };
 
+FoodCards.propTypes = {
+  handleFoodCard: PropTypes.func.isRequired,
+};
 export default FoodCards;

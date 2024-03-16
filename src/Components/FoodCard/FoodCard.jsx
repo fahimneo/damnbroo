@@ -54,7 +54,7 @@ const FoodCard = ({ foodCard, handleFoodCard }) => {
                 </div>
                 <div className="">
                   <button
-                    onClick={() => handleFoodCard(handleFoodCard)}
+                    onClick={() => handleFoodCard(foodCard)}
                     className=" border-none px-9 text-black  py-4 text-xl  font-medium bg-green-400 rounded-full "
                   >
                     Want to Cook
