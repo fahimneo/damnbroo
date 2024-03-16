@@ -1,9 +1,25 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 const FoodCard = () => {
+  const [foodCards, setFoodCards] = useState([]);
+
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((date) => setFoodCards(date));
+    console.log(foodCards);
+  }, []);
+
   return (
     <div className="container mx-auto">
-      <div className=" ">
+      <div className="flex ">
         {/* food card */}
-        <div className="  ">
+        <div className=" ">
+          <h1>card:{foodCards.length}</h1>
+          {
+            foodCards.map(foodCard =>)
+          }
           <div className="border-2 w-96 bg-base-100 shadow-xl p-6 rounded-2xl">
             <figure>
               <img
@@ -44,7 +60,39 @@ const FoodCard = () => {
           </div>
         </div>
         {/* food cart */}
-        <div></div>
+        <div className="border-2 text-2xl font-semibold text-center">
+          <div className="mt-8">
+            <h3>Want to cook:01</h3>
+            <div className="border-b-2 mt-4 mb-6"></div>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="table">
+              {/* head */}
+              <thead>
+                <tr className="font-medium opacity-75">
+                  <th></th>
+                  <th>Name</th>
+                  <th>time</th>
+                  <th>Calories</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                <tr className="bg-base-200">
+                  <th>1</th>
+                  <td className="opacity-60">Cy Ganderton</td>
+                  <td className="opacity-60">Quality Control Specialist</td>
+                  <td className="opacity-60">Blue</td>
+                  <th>
+                    <button className=" border-none px-9 text-black  py-4 text-xl  font-semibold bg-green-400 rounded-full ">
+                      Explore Now
+                    </button>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );
