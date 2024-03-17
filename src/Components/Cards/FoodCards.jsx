@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import FoodCard from "../FoodCard/FoodCard";
 const FoodCards = ({ handleFoodCard, foodCards }) => {
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-5">
+    <div className="sm:justify-center grid lg:grid-cols-2 md:grid-cols-2 gap-5">
       {foodCards.map((foodCard, idx) => (
         <FoodCard
           handleFoodCard={handleFoodCard}

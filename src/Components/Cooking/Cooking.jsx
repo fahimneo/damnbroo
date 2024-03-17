@@ -28,14 +28,10 @@ const Cooking = ({ cooking, time, calories }) => {
               ))}
             </tbody>
           </table>
-          <div className="font-medium mr-5 opacity-90 mt-5">
+          <div className="font-medium mr-5 opacity-90 mt-5 mb-7">
             <div className="flex gap-5 justify-end">
-              <h4>Total Time= </h4>
-              <h4>Total Calories= </h4>
-            </div>
-            <div className="flex gap-5 justify-end mr-[50px] mt-2">
-              <h4 className="">{time} minutes </h4>
-              <h4>calories {calories}</h4>
+              <h4>Total Time= {time} minutes</h4>
+              <h4>Total Calories= {calories} calories</h4>
             </div>
           </div>
         </div>
