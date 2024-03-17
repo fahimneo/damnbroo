@@ -26,7 +26,7 @@ function App() {
     if (!isExist) {
       setAddCarts([...addCarts, data]);
     } else {
-      toast("Wow so easy!");
+      toast("This item already exist !");
     }
   };
 
