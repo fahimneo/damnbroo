@@ -18,7 +18,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="">
-          <h1 className="text-4xl font-bold ml-3">Nourish Nook</h1>
+          <h1 className="text-2xl lg:text-4xl  font-bold ml-3">Nourish Nook</h1>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">

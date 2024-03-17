@@ -17,9 +17,9 @@ const FoodCard = ({ foodCard, handleFoodCard }) => {
           {/* food card */}
           <div className=" ">
             <div className="border-2 max-w-[500px]  bg-base-100 shadow-xl p-6 rounded-2xl">
-              <figure>
+              <figure className="overflow-hidden">
                 <img
-                  className="rounded-2xl h-60 w-full "
+                  className="rounded-2xl h-60 w-full hover:scale-110 duration-500"
                   src={recipe_image}
                   alt="food"
                 />

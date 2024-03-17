@@ -7,8 +7,8 @@ const Banner = () => {
         borderRadius: "24px",
       }}
     >
-      <div className="hero-overlay bg-opacity-60 rounded-r-3xl"></div>
-      <div className=" text-center text-neutral-content lg:w-[70%] rounded-r-3xl p-3 ">
+      <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
+      <div className=" text-center text-neutral-content lg:w-[70%] rounded-3xl p-3 ">
         <h2 className="lg:text-6xl text-5xl font-bold text-white">
           Discover an exceptional cooking class tailored for you!
         </h2>

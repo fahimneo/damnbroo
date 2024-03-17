@@ -26,8 +26,13 @@ function App() {
     // console.log(data.recipe_id);
     if (!isExist) {
       setAddCarts([...addCarts, data]);
+      toast.success("Successfully added", {
+        position: "top-center",
+      });
     } else {
-      toast("This item already exist !");
+      toast.error("This item already exist !", {
+        position: "top-center",
+      });
     }
   };
 
@@ -35,6 +40,9 @@ function App() {
   const [time, setTiem] = useState(0);
   const [calories, setCalories] = useState(0);
   const handlePreparing = (cook) => {
+    toast.success("Cooking !", {
+      position: "top-center",
+    });
     const remainingCart = addCarts.filter(
       (item) => item.recipe_id != cook.recipe_id
     );
