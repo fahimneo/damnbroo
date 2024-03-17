@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  flex gap-5"
           >
             <li>Home</li>
             <li>Recipes</li>
@@ -43,9 +43,9 @@ const Navbar = () => {
           <li>Search</li>
         </ul>
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-end  lg:flex">
         <div className="flex gap-4">
-          <button className="flex gap-2 bg-slate-100 items-center input rounded-full  max-w-xs ">
+          <button className="lg:flex gap-2 bg-slate-100 items-center input rounded-full  max-w-xs hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

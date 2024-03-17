@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Cart = ({ addCarts, handlePreparing }) => {
-  console.log(addCarts);
+  // console.log(addCarts);
   return (
     <div>
       <div className="overflow-x-auto">
@@ -24,7 +24,7 @@ const Cart = ({ addCarts, handlePreparing }) => {
                 <td>{cart.calories}</td>
                 <td>
                   <button
-                    onClick={() => handlePreparing(addCarts)}
+                    onClick={() => handlePreparing(cart)}
                     className="btn  border-none  text-black hover:text-white font-semibold bg-green-400 rounded-full "
                   >
                     Preparing
