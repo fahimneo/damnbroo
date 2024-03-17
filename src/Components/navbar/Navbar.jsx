@@ -50,7 +50,7 @@ const Navbar = () => {
             <input type="text" placeholder="Search" className="" />
           </button>
           <div className="w-12 h-12 bg-green-400 rounded-full flex justify-center items-center">
-            <i className="fa-regular fa-circle-user text-2xl"></i>
+            <i className="fa-regular fa-circle-user text-2xl dark:text-black"></i>
           </div>
         </div>
       </div>

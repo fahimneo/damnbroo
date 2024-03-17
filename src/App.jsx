@@ -9,6 +9,7 @@ import Carts from "./Components/Carts/Carts";
 import Cooking from "./Components/Cooking/Cooking";
 import Navbar from "./Components/navbar/Navbar";
 import { useEffect, useState } from "react";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [foodCards, setFoodCards] = useState([]);
@@ -38,9 +39,9 @@ function App() {
       (item) => item.recipe_id != cook.recipe_id
     );
     setAddCarts(remainingCart);
+    setCooking([...cooking, cook]);
 
     // set cooking time
-    setCooking([...cooking, cook]);
     const cookTime = parseInt(cook.preparing_time);
     setTiem(time + cookTime);
 
@@ -87,6 +88,7 @@ function App() {
             ></Cooking>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     </>
   );
