@@ -13,7 +13,7 @@ const Banner = () => {
           Discover an exceptional cooking class tailored for you!
         </h2>
         <p className="mt-6 mb-10">
-          Step into Nourish Nook, your vibrant culinary haven, offering bespoke
+          Step into Damn cock, your vibrant culinary haven, offering bespoke
           recipes and immersive cooking classes for a delicious journey to
           health and vitality.
         </p>
