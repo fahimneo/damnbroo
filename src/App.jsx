@@ -10,7 +10,7 @@ import Cooking from "./Components/Cooking/Cooking";
 import Navbar from "./Components/navbar/Navbar";
 import { useEffect, useState } from "react";
 import Footer from "./Components/Footer/Footer";
-
+//hi
 function App() {
   const [foodCards, setFoodCards] = useState([]);
   useEffect(() => {
